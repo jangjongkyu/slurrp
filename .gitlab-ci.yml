@@ -1,0 +1,23 @@
+stages:
+    - build
+    - deploy
+
+dev-build:
+    stage: build
+    tags:
+        - dev
+    only:
+        - master
+    script:
+        - cp -f $CI_DEV_ENV .env
+        - docker build -t skyware/sec-frontoffice-fe:latest .
+
+dev-deploy:
+    stage: deploy
+    tags:
+        - dev
+    only:
+        - master
+    script:
+        - docker stop sec-frontoffice-fe || true && docker rm sec-frontoffice-fe || true
+        - docker run -d --name sec-frontoffice-fe -p 28090:3000 -e TZ=Asia/Seoul --restart always skyware/sec-frontoffice-fe:latest

@@ -1,0 +1,249 @@
+* {
+  -webkit-touch-callout: none;
+}
+
+.loading-box {
+  margin: 80px auto;
+  text-align: center;
+}
+
+.loading-img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.top-0 {
+  top: 0 !important;
+}
+
+.text-light {
+  color: lighten(#000000, 70) !important;
+}
+
+// accordion
+.v-collapse-content {
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.v-collapse-content-end {
+  height: inherit;
+}
+
+// star rating
+.my_review_star_wrap {
+  .vue-rate-it-rating {
+    justify-content: center;
+  }
+}
+
+.vue-rate-it-rating-item {
+  margin-right: 6px;
+}
+
+//swiper
+.swiper-pagination-bullet-active {
+  background: #000 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000 !important;
+
+  &:after {
+    display: none;
+  }
+}
+
+// modal
+.v--modal {
+  border-radius: 0 !important;
+}
+
+.v--modal-overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.v--modal-overlay .v--modal-box {
+  overflow-y: auto !important;
+}
+
+.v--modal-overlay .v--modal-box {
+  // for web
+  .mar_set {
+    margin: 0 15px;
+    width: auto;
+  }
+}
+.daum-postcode {
+  height: inherit !important;
+}
+
+// accordion(categoryModal, filterModal)
+.accordion {
+  .board_header::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #333;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin: -5px 0 0 -4px;
+    opacity: 0.3;
+  }
+  .card-active {
+    .board_header {
+      .tit {
+        font-weight: 700!important;
+        color:#000;
+      }
+      &::before{
+        transform: rotate(-45deg);
+        margin: -1px 0 0 -4px;
+        opacity: 1;
+      }
+    }
+  }
+  .accordion-body {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+// event view read more
+.review_txt {
+  span {
+    //white-space: pre-line;
+    word-break: break-all;
+  }
+
+  .bt_more_xs, .bt_close_xs {
+    background-position: 0 center;
+  }
+
+  .bt_more_xs {
+    margin-left: 10px;
+  }
+}
+
+.event_commonts .commonts {
+  span {
+    //white-space: pre-line;
+    word-break: break-all;
+  }
+}
+
+// calendar
+body .vdp-datepicker__calendar {
+  width: 200px;
+  padding: 10px;
+
+  .day__month_btn.up {
+    font-size: 14px;
+  }
+
+  .cell {
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+  }
+}
+
+.calendarRight {
+  .vdp-datepicker__calendar {
+    right: 0;
+  }
+}
+
+// transition
+.slide-enter-active {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.slide-leave-active {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to, .slide-leave {
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.slide-enter, .slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.fade-enter-active {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.fade-leave-active {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.fade-enter-to, .fade-leave {
+  opacity: 1;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+// tooltip
+.v-popover {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+.checkbox_square_wrap input.checked + .check_icon {
+  background-image: url("/web/images/bt_checkbox_square_yes.png");
+}
+
+.v--modal-overlay.v--modal-no-overlay {
+  background-color: transparent !important;
+  width: 0;
+  height: 0;
+}
+
+.app_down {
+  z-index: 1000;
+}
