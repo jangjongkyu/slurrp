@@ -97,7 +97,7 @@ export default {
 
     },
 
-    destroyed(){
+    destroyed() {
         document.removeEventListener("mousemove", this.draw);
     }
 
